@@ -13,7 +13,8 @@ public class RestaurantApplication {
         Chef chef = new Chef();
 
         chef.setName("백종원");
-
+        chef.setAge(57);
+        restaurant.setChef(chef);
         // 로그를 보고 싶을 때는 System.out.println()을 쓰면 절대로 안된다.
         // log4j나 log4j2, slf4j와 같은 라이브러리를 사용해서 로그를 찍어야 한다.
         // log의 5가지 레벨(Level)

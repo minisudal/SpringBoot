@@ -1,10 +1,8 @@
 package kr.ac.hnu.itup;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
+@Data
 public class Chef {
     private String name;
     private int age;

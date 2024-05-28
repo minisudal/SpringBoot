@@ -8,5 +8,5 @@ public class Restaurant {
     String name;
     String address;
     String phone;
-    String chef;
+    Chef chef;
 }
