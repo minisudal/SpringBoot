@@ -1,24 +1,26 @@
 package kr.ac.hnu.itup;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.ConfigurableBootstrapContext;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ImportResource;
-
-import java.util.Objects;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @Slf4j
 @SpringBootApplication
-@ImportResource("classpath:root-context.xml")
+//@ImportResource("classpath:root-context.xml")
 public class ItupApplication {
 
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(ItupApplication.class, args);
         Restaurant restaurant = context.getBean("restaurant", Restaurant.class);
-//        System.out.println("restaurant: {}" + restaurant);
-        log.info("restaurant: {}", restaurant);
-    }
+        log.info("restaurant : " +  restaurant);
+        Chef chef = restaurant.getChef();
+        Ingredient ingredient = new Ingredient();
 
+        Food food = chef.cook(ingredient);
+        log.info("food : {}",  food);
+    }
 }

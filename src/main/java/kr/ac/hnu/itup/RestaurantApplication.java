@@ -9,7 +9,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class RestaurantApplication {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("root-context.xml");
-//        context = new AnnotationConfigApplicationContext();
 
 
 //        Restaurant restaurant = new Restaurant();
@@ -24,8 +23,6 @@ public class RestaurantApplication {
 
         // 로그를 보고 싶을 때는 System.out.println()을 쓰면 절대로 안된다.
         // log4j나 log4j2, slf4j와 같은 라이브러리를 사용해서 로그를 찍어야 한다.
-
-        // System.out.println(restaurant);
         // log의 5가지 레벨(Level)
         // trace, debug, info, warning, error
         // 출력 세팅은 application.properties에서 한다.
