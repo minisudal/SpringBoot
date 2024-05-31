@@ -12,7 +12,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 @SpringBootApplication
 //@ImportResource("classpath:root-context.xml")
 public class ItupApplication {
-
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(ItupApplication.class, args);
         Restaurant restaurant = context.getBean("restaurant", Restaurant.class);
